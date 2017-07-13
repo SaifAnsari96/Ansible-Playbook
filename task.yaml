@@ -1,0 +1,10 @@
+---
+  - hosts: <hostname in hosts.ini>
+    remote_user: ec2-user
+    vars:
+       ansible_ssh_private_key_file: "<path to key>" 
+    tasks:  
+      - name: going into code directory and executing command
+        command: <command>
+        args:
+          chdir: <path to directory>
